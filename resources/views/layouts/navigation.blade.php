@@ -30,7 +30,7 @@
                     <!-- Member Navbar -->
                         <div class="member-navbar hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
                         <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
-                            {{ __('Dashboard') }}
+                            {{ __('Home') }}
                         </x-nav-link>
                         <x-nav-link href="\main\perpus">
                             {{ __('Perpus') }}

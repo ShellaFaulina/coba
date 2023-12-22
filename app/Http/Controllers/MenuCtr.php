@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Menu;
+use App\Models\menu;
 use App\Models\Kategori;
 use Illuminate\Support\Facades\Gate;
 use Illuminate\Support\Facades\Auth;
@@ -44,17 +44,17 @@ class MenuCtr extends Controller
         $request->validate([
             'title' => 'required',
             'description' => 'required',
-            'photo' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
+            'image' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
         ]);
 
         // Simpan foto ke dalam direktori storage
         $path = $request->file('image')->store('images', 'public');
 
         // Simpan data ke dalam database
-        $kategori = new Menu();
+        $kategori = new Kategori();
         $kategori->title = $request->title;
         $kategori->description = $request->description;
-        $kategori->photo = $path; // Sesuaikan dengan nama kolom yang sesuai di tabel Anda
+        $kategori->image = $path; // Sesuaikan dengan nama kolom yang sesuai di tabel Anda
         $kategori->save();
 
         // Redirect dengan pesan sukses jika diperlukan

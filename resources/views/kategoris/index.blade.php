@@ -4,8 +4,8 @@
 <x-app-layout>
     <body>
         <x-slot name="header">
-            <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
-                {{$title}}
+            <h2 class="font-semibold text-xl text-black-800 dark:text-black-200 leading-tight">
+                List Menu
             </h2>
         </x-slot>
 

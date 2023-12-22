@@ -49,7 +49,7 @@
                     <div class="navbar-nav ms-auto py-0 pe-4">
                         <a href="{{ url('/') }}" class="nav-item nav-link active">Home</a>
                         <a href="{{ url('/about-us') }}" class="nav-item nav-link">About Us</a>
-                        <a href="{{ url('/main/menu') }}" class="nav-item nav-link">Menu</a>
+                        <a href="{{ url('/menu') }}" class="nav-item nav-link">Menu</a>
                         <a href="{{ url('/service') }}" class="nav-item nav-link">Service</a>  
                         <div class="nav-item dropdown">
                             <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
