@@ -34,13 +34,6 @@
 
 <body>
     <div class="container-xxl bg-white p-0">
-        <!-- Spinner Start -->
-        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
-                <span class="sr-only">Loading...</span>
-            </div>
-        </div>
-        <!-- Spinner End -->
 
         <!-- Navbar & Hero Start -->
         <div class="container-xxl position-relative p-0">
@@ -58,30 +51,15 @@
                         <a href="{{ url('/about-us') }}" class="nav-item nav-link">About Us</a>
                         <a href="{{ url('/menu') }}" class="nav-item nav-link">Menu</a>
                         <a href="{{ url('/service') }}" class="nav-item nav-link">Service</a>  
-                        <div class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
-                            <div class="dropdown-menu m-0">
-                                <a href="booking.html" class="dropdown-item">Booking</a>
-                                <a href="{{ url('/team') }}" class="dropdown-item">Our Team</a>
-                                <a href="{{ url('/testimonial') }}" class="dropdown-item">Review</a>
-                            </div>
-                        </div>
+                        <a href="{{ url('/testimonial') }}" class="nav-item nav-link">Review</a>
                         <a href="{{ url('/contact') }}" class="nav-item nav-link">Contact</a>
                     </div>
-                    <a href="" class="btn btn-primary py-2 px-4">Login</a>
                 </div>
             </nav>
 
             <div class="container-xxl py-5 bg-dark hero-header mb-5">
                 <div class="container text-center my-5 pt-5 pb-4">
                     <h1 class="display-3 text-white mb-3 animated slideInDown">Services</h1>
-                    <nav aria-label="breadcrumb">
-                        <ol class="breadcrumb justify-content-center text-uppercase">
-                            <li class="breadcrumb-item"><a href="#">Home</a></li>
-                            <li class="breadcrumb-item"><a href="#">Pages</a></li>
-                            <li class="breadcrumb-item text-white active" aria-current="page">Service</li>
-                        </ol>
-                    </nav>
                 </div>
             </div>
         </div>
@@ -223,9 +201,8 @@
                 <div class="row g-5">
                     <div class="col-lg-3 col-md-6">
                         <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">Company</h4>
-                        <a class="btn btn-link" href="">About Us</a>
-                        <a class="btn btn-link" href="">Contact Us</a>
-                        <a class="btn btn-link" href="">Reservation</a>
+                        <a class="btn btn-link" href="/about-us">About Us</a>
+                        <a class="btn btn-link" href="/contact">Contact Us</a>
                         <a class="btn btn-link" href="">Privacy Policy</a>
                         <a class="btn btn-link" href="">Terms & Condition</a>
                     </div>
@@ -244,9 +221,9 @@
                     <div class="col-lg-3 col-md-6">
                         <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">Opening</h4>
                         <h5 class="text-light fw-normal">Monday - Saturday</h5>
-                        <p>10AM - 21PM</p>
+                        <p>10AM - 9PM</p>
                         <h5 class="text-light fw-normal">Sunday</h5>
-                        <p> Close </p>
+                        <p>9AM - 8PM</p>
                     </div>
                     <div class="col-lg-3 col-md-6">
                         <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">Newsletter</h4>
@@ -262,11 +239,7 @@
                 <div class="copyright">
                     <div class="row">
                         <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                            &copy; <a class="border-bottom" href="#">Your Site Name</a>, All Right Reserved. 
-							
-							<!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-							Designed By <a class="border-bottom" href="https://htmlcodex.com">HTML Codex</a><br><br>
-                            Distributed By <a class="border-bottom" href="https://themewagon.com" target="_blank">ThemeWagon</a>
+                            &copy; <a class="border-bottom" href="#">Pesona Coffe</a>, All Right Reserved. 
                         </div>
                         <div class="col-md-6 text-center text-md-end">
                             <div class="footer-menu">

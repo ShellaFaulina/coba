@@ -29,7 +29,7 @@
                 @elseif(auth()->user()->roleid === 2)
                     <!-- Member Navbar -->
                         <div class="member-navbar hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
-                        <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
+                        <x-nav-link href="/main/index" :active="request()->routeIs('main.index')">
                             {{ __('Home') }}
                         </x-nav-link>
                         <x-nav-link href="\main\perpus">

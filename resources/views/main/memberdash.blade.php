@@ -20,7 +20,7 @@
                 @elseif($book->tempstatus == 2)
                     <td>Menu Lama</td>
                     <td>
-                    <button class="btn btn-outline-success"  onclick="window.location.href='/main/{{$kategori->id}}/validasistatus'">Konfirmasi</button>
+                    <button class="btn btn-outline-success"  onclick="window.location.href='/main/index{{$kategori->id}}/validasistatus'">Konfirmasi</button>
                     </td>
                 @else
                     <td>error</td>

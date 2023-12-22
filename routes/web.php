@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MenuCtr;
 use App\Http\Controllers\AboutUsCtr;
 use App\Http\Controllers\ContactCtr;
+use App\Http\Controllers\ServiceCtr;
 use App\Http\Controllers\TestimonialCtr;
 use Illuminate\Support\Facades\Auth;
 
@@ -32,6 +33,10 @@ Route::get('/', function () {
 Route::get('/dashboard', [MenuCtr::class, 'layout'])
     ->middleware(['auth', 'verified'])
     ->name('dashboard');
+
+Route::get('/main/index', [MenuCtr::class, 'layout'])
+    ->middleware(['auth', 'verified'])
+    ->name('index');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
@@ -67,6 +72,10 @@ Route::get('/contact', function () {
 
 Route::get('/testimonial', function () {
     return view('main.testimonial');
+});
+
+Route::get('/service', function () {
+    return view('main.service');
 });
 
 Route::get('/books/{id}/pinjam', [BookController::class, 'borrow'])->name('books.borrow');

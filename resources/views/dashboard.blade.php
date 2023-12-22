@@ -22,7 +22,7 @@
             </div>
         </body>
         <div class="footer">
-            <p>&copy; Perpustakaan Kelapa Dua</p>
+            <p>&copy; Pesona Coffe</p>
         </div>
     </x-app-layout>
 </html>
