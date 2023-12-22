@@ -3,6 +3,9 @@
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MenuCtr;
+use App\Http\Controllers\AboutUsCtr;
+use App\Http\Controllers\ContactCtr;
+use App\Http\Controllers\TestimonialCtr;
 use Illuminate\Support\Facades\Auth;
 
 /*
@@ -49,6 +52,22 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/books/{id}/show', [BookController::class, 'show'])->name('books.show');
+
+Route::get('/about-us', function () {
+    return view('main.about');
+});
+
+Route::get('/main/menu', function () {
+    return view('main.menu');
+});
+
+Route::get('/contact', function () {
+    return view('main.contact');
+});
+
+Route::get('/testimonial', function () {
+    return view('main.testimonial');
+});
 
 Route::get('/books/{id}/pinjam', [BookController::class, 'borrow'])->name('books.borrow');
 Route::post('/books/{id}/pinjamval', [BookController::class, 'borrowval']);

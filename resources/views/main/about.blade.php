@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Restoran - Bootstrap Restaurant Template</title>
+    <title>Pesona Coffe</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
@@ -49,17 +49,9 @@
                         <a href="{{ url('/about-us') }}" class="nav-item nav-link">About Us</a>
                         <a href="{{ url('/menu') }}" class="nav-item nav-link">Menu</a>
                         <a href="{{ url('/service') }}" class="nav-item nav-link">Service</a>  
-                        <div class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
-                            <div class="dropdown-menu m-0">
-                                <a href="booking.html" class="dropdown-item">Booking</a>
-                                <a href="{{ url('/team') }}" class="dropdown-item">Our Team</a>
-                                <a href="{{ url('/testimonial') }}" class="dropdown-item">Review</a>
-                            </div>
-                        </div>
+                        <a href="{{ url('/testimonial') }}" class="nav-item nav-link">Review</a>
                         <a href="{{ url('/contact') }}" class="nav-item nav-link">Contact</a>
                     </div>
-                    <a href="" class="btn btn-primary py-2 px-4">Login</a>
                 </div>
             </nav>
 

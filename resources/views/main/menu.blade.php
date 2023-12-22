@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Restoran - Bootstrap Restaurant Template</title>
+    <title>Pesona Coffe</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
@@ -26,7 +26,7 @@
     <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
 
     <!-- Customized Bootstrap Stylesheet -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
 
     <!-- Template Stylesheet -->
     <link rel="stylesheet" href="{{ asset('css/style.css')}}">
@@ -49,7 +49,7 @@
                     <div class="navbar-nav ms-auto py-0 pe-4">
                         <a href="{{ url('/') }}" class="nav-item nav-link active">Home</a>
                         <a href="{{ url('/about-us') }}" class="nav-item nav-link">About Us</a>
-                        <a href="{{ url('/menu') }}" class="nav-item nav-link">Menu</a>
+                        <a href="{{ url('/main/menu') }}" class="nav-item nav-link">Menu</a>
                         <a href="{{ url('/service') }}" class="nav-item nav-link">Service</a>  
                         <div class="nav-item dropdown">
                             <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
@@ -68,13 +68,6 @@
             <div class="container-xxl py-5 bg-dark hero-header mb-5">
                 <div class="container text-center my-5 pt-5 pb-4">
                     <h1 class="display-3 text-white mb-3 animated slideInDown">Food Menu</h1>
-                    <nav aria-label="breadcrumb">
-                        <ol class="breadcrumb justify-content-center text-uppercase">
-                            <li class="breadcrumb-item"><a href="#">Home</a></li>
-                            <li class="breadcrumb-item"><a href="#">Pages</a></li>
-                            <li class="breadcrumb-item text-white active" aria-current="page">Menu</li>
-                        </ol>
-                    </nav>
                 </div>
             </div>
         </div>

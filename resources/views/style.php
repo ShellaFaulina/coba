@@ -947,6 +947,11 @@ td.column2 {
     z-index: 99;
 }
 
+/*** Food Menu ***/
+.nav-pills .nav-item .active {
+    border-bottom: 2px solid var(--primary);
+}
+
 </style>
 
 </head>
