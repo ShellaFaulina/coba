@@ -42,21 +42,57 @@
                     <h1 class="text-primary m-0"><i class="fa fa-utensils me-3"></i>Pesona Coffe</h1>
                     <!-- <img src="img/logo.png" alt="Logo"> -->
                 </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                     <span class="fa fa-bars"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="navbar-nav ms-auto py-0 pe-4">
+                        <a href="{{ url('/') }}" class="nav-item nav-link ">Home</a>
+                        <a href="{{ url('/about-us') }}" class="nav-item nav-link">About Us</a>
+                        <a href="{{ url('/main/menu') }}" class="nav-item nav-link">Menu</a>
+                        <a href="{{ url('/service') }}" class="nav-item nav-link">Service</a>  
+                         <a href="{{ url('/testimonial') }}" class="nav-item nav-link">Review</a>
+                        <a href="{{ url('/contact') }}" class="nav-item nav-link">Contact</a>
+                    </div>
+                    <div id="logo">
+               
+                            @if (Route::has('login'))
+                                <div class="sm:fixed sm:top-0 sm:right-0 p-6 text-right z-10">
+                                    @auth
+                                        <a href="{{ url('/dashboard') }}" class="font-semibold text-white hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Dashboard</a>
+                                    @else
+                                        <a href="{{ route('login') }}" class="btn btn-primary py-2 px-4">Login</a>
+                                    @endauth
+                                </div>
+                            @endif
+                        </div>
+                </div>
+               <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                    <span class="fa fa-bars"></span>
+                </button>
+               <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav ms-auto py-0 pe-4">
                         <a href="{{ url('/') }}" class="nav-item nav-link active">Home</a>
                         <a href="{{ url('/about-us') }}" class="nav-item nav-link">About Us</a>
-                        <a href="{{ url('/menu') }}" class="nav-item nav-link">Menu</a>
+                        <a href="{{ url('main/menu') }}" class="nav-item nav-link">Menu</a>
                         <a href="{{ url('/service') }}" class="nav-item nav-link">Service</a>  
                         <a href="{{ url('/testimonial') }}" class="nav-item nav-link">Review</a>
                         <a href="{{ url('/contact') }}" class="nav-item nav-link">Contact</a>
                     </div>
                 </div>
-            </nav>
-                </div>
+                 <div id="logo">
+               
+                            @if (Route::has('login'))
+                                <div class="sm:fixed sm:top-0 sm:right-0 p-6 text-right z-10">
+                                    @auth
+                                        <a href="{{ url('/dashboard') }}" class="font-semibold text-white hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Dashboard</a>
+                                    @else
+                                        <a href="{{ route('login') }}" class="btn btn-primary py-2 px-4">Login</a>
+                                    @endauth
+                                </div>
+                            @endif
+                        </div>
+                </div>-->
             </nav>
 
             <div class="container-xxl py-5 bg-dark hero-header mb-5">
@@ -80,27 +116,28 @@
                         <div class="row gy-4">
                             <div class="col-md-4">
                                 <h5 class="section-title ff-secondary fw-normal text-start text-primary">Booking</h5>
-                                <p><i class="fa fa-envelope-open text-primary me-2"></i>book@example.com</p>
+                                <p><i class="fa fa-envelope-open text-primary me-2"></i>0813 2737 8244</p>
                             </div>
                             <div class="col-md-4">
                                 <h5 class="section-title ff-secondary fw-normal text-start text-primary">General</h5>
-                                <p><i class="fa fa-envelope-open text-primary me-2"></i>info@example.com</p>
+                                <p><i class="fa fa-envelope-open text-primary me-2"></i>pesonacoffe@gmail.com</p>
                             </div>
                             <div class="col-md-4">
                                 <h5 class="section-title ff-secondary fw-normal text-start text-primary">Technical</h5>
-                                <p><i class="fa fa-envelope-open text-primary me-2"></i>tech@example.com</p>
+                                <p><i class="fa fa-envelope-open text-primary me-2"></i>pesonacoffe@gmail.com</p>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-6 wow fadeIn" data-wow-delay="0.1s">
                         <iframe class="position-relative rounded w-100 h-100"
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3001156.4288297426!2d-78.01371936852176!3d42.72876761954724!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4ccc4bf0f123a5a9%3A0xddcfc6c1de189567!2sNew%20York%2C%20USA!5e0!3m2!1sen!2sbd!4v1603794290143!5m2!1sen!2sbd"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.0561603800265!2d106.61244651171785!3d-6.256332293706049!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69fdf4191f285d%3A0x835dd0eb22a4d2d!2sPesona%20Coffee%20Scientia!5e0!3m2!1sid!2sid!4v1703305048832!5m2!1sid!2sid"
                             frameborder="0" style="min-height: 350px; border:0;" allowfullscreen="" aria-hidden="false"
                             tabindex="0"></iframe>
                     </div>
-                    <div class="col-md-6">
+                   <div class="col-md-6">
                         <div class="wow fadeInUp" data-wow-delay="0.2s">
-                            <form>
+                            <h5 class="section-title ff-secondary fw-normal text-start text-primary">Jangan Lupa Datang ke Pesona Coffe!!</h5>
+                            <!--<form>
                                 <div class="row g-3">
                                     <div class="col-md-6">
                                         <div class="form-floating">
@@ -133,14 +170,14 @@
                             </form>
                         </div>
                     </div>
-                </div>
+                </div>-->
             </div>
         </div>
         <!-- Contact End -->
 
 
-         <!-- Footer Start -->
-         <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
+        <!-- Footer Start -->
+<div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
             <div class="container py-5">
                 <div class="row g-5">
                     <div class="col-lg-3 col-md-6">
@@ -153,13 +190,13 @@
                     <div class="col-lg-3 col-md-6">
                         <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">Contact</h4>
                         <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Jl. Scientia Square Utara, Curug Sangereng, Kec. Klp. Dua, Kabupaten Tangerang, Banten</p>
-                        <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+012 345 67890</p>
-                        <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@example.com</p>
+                        <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>0813 2737 8244</p>
+                        <p class="mb-2"><i class="fa fa-envelope me-3"></i>pesonacoffe@gmail.com</p>
                         <div class="d-flex pt-2">
-                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
-                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
-                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
+                            <a class="btn btn-outline-light btn-social" href="https://twitter.com/i/flow/login?redirect_after_login=%2Fsofwanam3"><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-outline-light btn-social" href="https://m.facebook.com/p/Pesona-COFFE-100069236881261/"><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-outline-light btn-social" href="https://www.youtube.com/channel/UCvahYH7DDu08fTtOCtTPfhw"><i class="fab fa-youtube"></i></a>
+                            
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6">
@@ -167,15 +204,15 @@
                         <h5 class="text-light fw-normal">Monday - Saturday</h5>
                         <p>10AM - 9PM</p>
                         <h5 class="text-light fw-normal">Sunday</h5>
-                        <p>9AM - 8PM</p>
+                        <p>9AM - 8PM </p>
                     </div>
                     <div class="col-lg-3 col-md-6">
                         <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">Newsletter</h4>
                         <p>Keep up with us !</p>
-                        <div class="position-relative mx-auto" style="max-width: 400px;">
+                       <!-- <div class="position-relative mx-auto" style="max-width: 400px;">
                             <input class="form-control border-primary w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
                             <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">SignUp</button>
-                        </div>
+                        </div>-->
                     </div>
                 </div>
             </div>

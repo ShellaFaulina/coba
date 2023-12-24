@@ -40,19 +40,57 @@
                     <h1 class="text-primary m-0"><i class="fa fa-utensils me-3"></i>Pesona Coffe</h1>
                     <!-- <img src="img/logo.png" alt="Logo"> -->
                 </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                    <span class="fa fa-bars"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav ms-auto py-0 pe-4">
+                        <a href="{{ url('/') }}" class="nav-item nav-link">Home</a>
+                        <a href="{{ url('/about-us') }}" class="nav-item nav-link">About Us</a>
+                        <a href="{{ url('/main/menu') }}" class="nav-item nav-link">Menu</a>
+                        <a href="{{ url('/service') }}" class="nav-item nav-link">Service</a>  
+                         <a href="{{ url('/testimonial') }}" class="nav-item nav-link">Review</a>
+                        <a href="{{ url('/contact') }}" class="nav-item nav-link">Contact</a>
+                    </div>
+                    <div id="logo">
+               
+                            @if (Route::has('login'))
+                                <div class="sm:fixed sm:top-0 sm:right-0 p-6 text-right z-10">
+                                    @auth
+                                        <a href="{{ url('/dashboard') }}" class="font-semibold text-white hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Dashboard</a>
+                                    @else
+                                        <a href="{{ route('login') }}" class="btn btn-primary py-2 px-4">Login</a>
+                                    @endauth
+                                </div>
+                            @endif
+                        </div>
+                </div>
+               <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                     <span class="fa fa-bars"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="navbar-nav ms-auto py-0 pe-4">
                         <a href="{{ url('/') }}" class="nav-item nav-link active">Home</a>
                         <a href="{{ url('/about-us') }}" class="nav-item nav-link">About Us</a>
-                        <a href="{{ url('/menu') }}" class="nav-item nav-link">Menu</a>
+                        <a href="{{ url('/main/menu') }}" class="nav-item nav-link">Menu</a>
                         <a href="{{ url('/service') }}" class="nav-item nav-link">Service</a>  
                         <a href="{{ url('/testimonial') }}" class="nav-item nav-link">Review</a>
                         <a href="{{ url('/contact') }}" class="nav-item nav-link">Contact</a>
                     </div>
                 </div>
+                 <div id="logo">
+               
+                            @if (Route::has('login'))
+                                <div class="sm:fixed sm:top-0 sm:right-0 p-6 text-right z-10">
+                                    @auth
+                                        <a href="{{ url('/dashboard') }}" class="font-semibold text-white hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Dashboard</a>
+                                    @else
+                                        <a href="{{ route('login') }}" class="btn btn-primary py-2 px-4">Login</a>
+                                    @endauth
+                                </div>
+                            @endif
+                        </div>
+                </div>-->
             </nav>
 
             <div class="container-xxl py-5 bg-dark hero-header mb-5">
@@ -86,7 +124,15 @@
             <div class="col-lg-6">
                 <h5 class="section-title ff-secondary text-start text-primary fw-normal">About Us</h5>
                 <h1 class="mb-4">Welcome to <i class="fa fa-utensils text-primary me-2"></i> Pesona Coffe</h1>
-                <p class="mb-4">Selamat menikmati secangkir kopi istimewa di Pesona Coffee, tempat di mana kelezatan dan kenyamanan bertemu. Jelajahi menu kami untuk menemukan berbagai varian kopi yang kami tawarkan, mulai dari yang lembut hingga yang penuh karakter. Rasakan kehangatan dan kenikmatan kopi kami yang begitu khas.</p>
+                <p class="mb-4">Di Pesona Coffee, kami tidak hanya menyajikan secangkir kopi; kami menghadirkan pengalaman kopi yang unik dan istimewa. Sejak pendirian kami, kami berkomitmen untuk menjadi destinasi bagi para pecinta kopi yang mencari lebih dari sekadar minuman; kami adalah rumah bagi mereka yang menghargai kelezatan dan kenyamanan sejati.</p>
+                <h5 class="section-title ff-secondary text-start text-primary fw-normal ">Keindahan Rasa dalam Setiap Tetes Kopi</h5>
+                <p class="mb-4">Setiap biji kopi yang kami pilih dengan cermat berasal dari sumber yang terbaik di seluruh dunia. Kami memahami bahwa kopi adalah seni, dan kami bertekad untuk menghadirkan keindahan rasa dalam setiap tetesnya. Dari biji yang dipetik dengan cermat hingga proses pemanggangan yang teliti, setiap langkah di Pesona Coffee dijalani dengan dedikasi untuk memberikan pengalaman kopi yang tak terlupakan.</p>
+                <h5 class="section-title ff-secondary text-start text-primary fw-normal">Variasi Kopi yang Beragam</h5>
+                <p class="mb-4">Jelajahi menu kami yang beragam dan temukan berbagai varian kopi yang kami tawarkan. Mulai dari kopi lembut yang menyentuh lidah dengan kelembutan hingga kopi penuh karakter yang membangunkan seluruh indera. Kami menghadirkan kekayaan rasa yang melampaui harapan, memenuhi setiap selera dan preferensi. Kami yakin bahwa di antara aroma dan cita rasa kami, Anda akan menemukan kesempurnaan secangkir kopi.</p>
+                <div class="col-lg-12 section-paragraph">
+                    <p class="mb-4" style="text-align: center;">Terima kasih telah memilih Pesona Coffee sebagai tempat Anda menemukan keajaiban kopi. Kami berkomitmen untuk terus menyajikan kelezatan dan pengalaman yang melebihi harapan Anda. Mari bersama-sama merayakan cinta kami terhadap kopi yang tak terbatas di Pesona Coffee.</p>
+                </div>
+
                 <!--<div class="row g-4 mb-4">
                     <div class="col-sm-6">
                         <div class="d-flex align-items-center border-start border-5 border-primary px-3">
@@ -107,7 +153,7 @@
                         </div>
                     </div>-->
                 </div>
-                <a class="btn btn-primary py-3 px-5 mt-2" href="">Read More</a>
+               <!-- <a class="btn btn-primary py-3 px-5 mt-2" href="">Read More</a>-->
             </div>
         </div>
     </div>
@@ -180,8 +226,8 @@
                             <div class="rounded-circle overflow-hidden m-4">
                                 <img class="img-fluid" src="img/team-1.jpg" alt="">
                             </div>
-                            <h5 class="mb-0">Full Name</h5>
-                            <small>Designation</small>
+                            <h5 class="mb-0">Mutik</h5>
+                            <small>Owner</small>
                             <div class="d-flex justify-content-center mt-3">
                                 <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
                                 <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-twitter"></i></a>
@@ -194,8 +240,8 @@
                             <div class="rounded-circle overflow-hidden m-4">
                                 <img class="img-fluid" src="img/team-2.jpg" alt="">
                             </div>
-                            <h5 class="mb-0">Full Name</h5>
-                            <small>Designation</small>
+                            <h5 class="mb-0">Regina Harnadi</h5>
+                            <small>Co-Owner</small>
                             <div class="d-flex justify-content-center mt-3">
                                 <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
                                 <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-twitter"></i></a>
@@ -208,8 +254,8 @@
                             <div class="rounded-circle overflow-hidden m-4">
                                 <img class="img-fluid" src="img/team-3.jpg" alt="">
                             </div>
-                            <h5 class="mb-0">Full Name</h5>
-                            <small>Designation</small>
+                            <h5 class="mb-0">Ridwan Hamzah</h5>
+                            <small>Barista</small>
                             <div class="d-flex justify-content-center mt-3">
                                 <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
                                 <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-twitter"></i></a>
@@ -222,8 +268,8 @@
                             <div class="rounded-circle overflow-hidden m-4">
                                 <img class="img-fluid" src="img/team-4.jpg" alt="">
                             </div>
-                            <h5 class="mb-0">Full Name</h5>
-                            <small>Designation</small>
+                            <h5 class="mb-0">Brilliat Pritiwi</h5>
+                            <small>Barista</small>
                             <div class="d-flex justify-content-center mt-3">
                                 <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
                                 <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-twitter"></i></a>
@@ -238,7 +284,7 @@
         
 
          <!-- Footer Start -->
-         <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
+<div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
             <div class="container py-5">
                 <div class="row g-5">
                     <div class="col-lg-3 col-md-6">
@@ -251,13 +297,13 @@
                     <div class="col-lg-3 col-md-6">
                         <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">Contact</h4>
                         <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Jl. Scientia Square Utara, Curug Sangereng, Kec. Klp. Dua, Kabupaten Tangerang, Banten</p>
-                        <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+012 345 67890</p>
-                        <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@example.com</p>
+                        <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>0813 2737 8244</p>
+                        <p class="mb-2"><i class="fa fa-envelope me-3"></i>pesonacoffe@gmail.com</p>
                         <div class="d-flex pt-2">
-                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
-                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
-                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
+                            <a class="btn btn-outline-light btn-social" href="https://twitter.com/i/flow/login?redirect_after_login=%2Fsofwanam3"><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-outline-light btn-social" href="https://m.facebook.com/p/Pesona-COFFE-100069236881261/"><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-outline-light btn-social" href="https://www.youtube.com/channel/UCvahYH7DDu08fTtOCtTPfhw"><i class="fab fa-youtube"></i></a>
+                            
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6">
@@ -265,15 +311,15 @@
                         <h5 class="text-light fw-normal">Monday - Saturday</h5>
                         <p>10AM - 9PM</p>
                         <h5 class="text-light fw-normal">Sunday</h5>
-                        <p>9AM - 8PM</p>
+                        <p>9AM - 8PM </p>
                     </div>
                     <div class="col-lg-3 col-md-6">
                         <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">Newsletter</h4>
                         <p>Keep up with us !</p>
-                        <div class="position-relative mx-auto" style="max-width: 400px;">
+                       <!-- <div class="position-relative mx-auto" style="max-width: 400px;">
                             <input class="form-control border-primary w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
                             <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">SignUp</button>
-                        </div>
+                        </div>-->
                     </div>
                 </div>
             </div>

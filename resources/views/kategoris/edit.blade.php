@@ -21,7 +21,7 @@
                             </tr>
                             <tr>
                                 <td class="column1"><p>Foto: </p></td>
-                                <td class="column2"><input type="file" name="image" id="" value="{{ asset('storage/' . $kategoris->image) }}" required>{{ asset('storage/' . $kategoris->image) }}</td>
+                                <td class="column2"><input type="file" name="image" id="image" value="{{ asset('storage/' . $kategoris->image) }}" required>{{ asset('storage/' . $kategoris->image) }}</td>
                             </tr>
                             <tr>
                                 <td class="column1"></td>
@@ -34,4 +34,23 @@
             </div>
         </x-app-layout>
     </body>
+    <script>
+        function updateFileName() {
+            var fileInput = document.getElementById('image');
+
+            if (fileInput.files.length > 0) {
+                var fileName = fileInput.files[0].name;
+                var validExtensions = ['png', 'svg', 'jpeg', 'jpg'];
+
+                var extension = fileName.split('.').pop().toLowerCase();
+
+                if (validExtensions.includes(extension)) {
+                    
+                } else {
+                    alert('Please choose a valid image file (png, svg, jpeg, jpg).');
+                    fileInput.value = ''; // Clear the file input
+                }
+            }
+        }
+    </script>
 </html>

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\menu;
 use App\Models\Kategori;
 use Illuminate\Support\Facades\Gate;
 use Illuminate\Support\Facades\Auth;
@@ -39,14 +40,6 @@ class MenuCtr extends Controller
 
     public function store(Request $request)
     {
-        // Validasi form
-        $request->validate([
-            'title' => 'required',
-            'description' => 'required',
-            'image' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
-        ]);
-
-        // Simpan foto ke dalam direktori storage
         $path = $request->file('image')->store('images', 'public');
 
         // Simpan data ke dalam database
@@ -93,15 +86,10 @@ class MenuCtr extends Controller
 
     public function update(Request $request, string $id)
     {
-        $request->validate([
-            'name' => 'required|string|max:255',
-            'description' => 'required|string',
-            'image' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
-        ]);
 
         $kategori = Kategori::find($id);
 
-        $kategori->name = $request->name;
+        $kategori->title = $request->title;
         $kategori->description = $request->description;
 
         if ($request->hasFile('image')) {
@@ -111,7 +99,7 @@ class MenuCtr extends Controller
             }
 
             // Simpan gambar baru
-            $imagePath = $request->file('image')->storePublic('image', 'public');
+            $imagePath = $request->file('image')->storePublicly('image', 'public');
             $kategori->image = $imagePath;
         }
 
