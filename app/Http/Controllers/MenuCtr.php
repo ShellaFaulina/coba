@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\menu;
 use App\Models\Kategori;
 use Illuminate\Support\Facades\Gate;
 use Illuminate\Support\Facades\Auth;

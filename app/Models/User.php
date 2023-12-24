@@ -12,8 +12,8 @@ class User extends Authenticatable
 {
     use HasApiTokens, HasFactory, Notifiable;
 
-    public function books(){
-        return $this->hasMany(Book::class);
+    public function kategoris(){
+        return $this->hasMany(Kategori::class);
     }
     
     /**
